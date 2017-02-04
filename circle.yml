@@ -1,0 +1,8 @@
+machine:
+  services:
+    - docker
+
+test:
+  override:
+    - docker build -t gustavo/docker-ci-test .
+    - docker run -it gustavo/docker-ci-test python test.py
